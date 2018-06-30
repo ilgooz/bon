@@ -1,5 +1,7 @@
 // Package bon provides routing capability for your net.Conn's like you do with for your
 // http handlers. It can both accept and open connections like described in Transporter.
+// Thus, you can both Connect to a route and invoke a handler of one when requested by others.
+
 package bon
 
 import (
@@ -25,7 +27,7 @@ type Transporter interface {
 	// which server or multiplex connection you will use to serve your new connection
 	// depending on value of Route.
 	//
-	// If you don't have multiple Server environment that each Server handles different
+	// If you don't have multiple server environment that each server handles different
 	// kind of routes you can safely ignore exploring the Route argument.
 	Open(Route) (net.Conn, error)
 
