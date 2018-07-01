@@ -1,7 +1,6 @@
 // Package bon provides routing capability for your net.Conn's like you do with for your
 // http handlers. It can both accept and open connections like described in Transporter.
 // Thus, you can both Connect to a route and invoke a handler of one when requested by others.
-
 package bon
 
 import (
@@ -38,7 +37,7 @@ type Transporter interface {
 	Close() error
 }
 
-// Bon provides you to register your handlers and start new connections for your Routes.
+// Bon provides functionalities to register your handlers and start new connections for your Routes.
 type Bon struct {
 	// transporter holds Transporter
 	transporter Transporter
