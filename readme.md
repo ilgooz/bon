@@ -25,6 +25,6 @@ go remoteService.Run()
 
 
 service := bon.New(serviceTransporter)
-conn, err := service.Connect(Tu)
+conn, err := service.Connect(GRPCConn)
 // do domething with your conn...
 ```
